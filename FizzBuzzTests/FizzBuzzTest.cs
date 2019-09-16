@@ -13,5 +13,12 @@ namespace FizzBuzzTests
             string expected = "1";
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void TestMethod2()
+        {
+            string actual = FizzBuzz1.Convert(3);
+            string expected = "Fizz";
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
