@@ -6,7 +6,7 @@ namespace FizzBuzz
     {
         public static string Convert(int number)
         {
-            return "1";
+            return number.ToString();
         }
     }
 }
