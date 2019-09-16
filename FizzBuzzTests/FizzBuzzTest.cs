@@ -6,18 +6,20 @@ namespace FizzBuzzTests
     [TestClass]
     public class FizzBuzzTest
     {
-        [TestMethod]
-        public void TestMethod1()
+        [DataTestMethod]
+        [DataRow("1", 1)]
+        [DataRow("2", 2)]
+        public void TestMethod1(string expected, int number)
         {
-            string actual = FizzBuzz1.Convert(1);
-            string expected = "1";
+            string actual = FizzBuzz1.Convert(number);
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod]
-        public void TestMethod2()
+
+        [DataTestMethod]
+        [DataRow("Fizz", 3)]
+        public void TestMethod2(string expected, int number)
         {
-            string actual = FizzBuzz1.Convert(3);
-            string expected = "Fizz";
+            string actual = FizzBuzz1.Convert(number);
             Assert.AreEqual(expected, actual);
         }
     }
